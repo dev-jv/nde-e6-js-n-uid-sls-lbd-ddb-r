@@ -1,0 +1,14 @@
+service: nde-e6-js-n-uid-sls-lbd-ddb-r
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+functions:
+  api:
+    handler: index.handler
+    events:
+      - httpApi:
+          path: /
+          method: get
